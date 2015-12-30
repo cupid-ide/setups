@@ -7,7 +7,7 @@
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/createsyncproject/1.0 https://raw.githubusercontent.com/cupid-ide/oomph/master/plugins/org.earthsystemmodeling.oomph.createsyncproject/model/CreateSyncProject.ecore"
     name="UGCS_Seasonal"
-    label="NEMS UGCS Seasonal">
+    label="UGCS Seasonal">
   <setupTask
       xsi:type="setup:VariableTask"
       name="noaa.username"

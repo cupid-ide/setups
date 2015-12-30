@@ -72,7 +72,9 @@
       </repositoryList>
     </targlet>
   </setupTask>
+  <!--
   <project href="user:/org.eclipse.projects.setup?name='user.project',label='&lt;User>',description='A container project for local user projects that are virtual members of the Cupid project catalog'#/"/>
+  -->
   <project name="nems.projects"
       label="NEMS">
     <project
