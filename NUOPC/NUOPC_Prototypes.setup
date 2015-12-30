@@ -9,8 +9,29 @@
     name="nuopc.prototypes.project"
     label="NUOPC Prototype Applications">
   <setupTask
+      xsi:type="setup:ResourceCopyTask"
+      id="copy.psf"
+      sourceURL="https://raw.githubusercontent.com/cupid-ide/setups/master/NUOPC/NUOPCProtos.psf"
+      targetURL="${workspace.location/NUOPCProtos.psf}">
+    <description></description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:TextModifyTask"
+      url="${copy.psf.targetURL}"
+      encoding="">
+    <modification
+        pattern="$NUOPC_TAG$">
+      <substitution>tags/ESMF_7_0_0_beta_snapshot_62</substitution>
+    </modification>
+    <modification
+        pattern="$NUOPC_PROJNAME$">
+      <substitution>ESMF_7_0_0_beta_snapshot_62</substitution>
+    </modification>
+    <description></description>
+  </setupTask>
+  <setupTask
       xsi:type="projectset:ProjectSetImportTask"
-      uRL="https://raw.githubusercontent.com/cupid-ide/setups/master/NUOPC/NUOPCProtos.psf">
+      uRL="${copy.psf.targetURL}">
     <description>Import NUOPC protos</description>
   </setupTask>
   <stream name="master"
