@@ -17,7 +17,7 @@
   </setupTask>
   <setupTask
       xsi:type="setup:TextModifyTask"
-      url="${copy.psf.targetURL}"
+      url="${copy.psf.targetURL|uri}"
       encoding="UTF-8">
     <modification
         pattern="$NUOPC_TAG$">
@@ -31,7 +31,7 @@
   </setupTask>
   <setupTask
       xsi:type="projectset:ProjectSetImportTask"
-      uRL="${copy.psf.targetURL}">
+      uRL="${copy.psf.targetURL|uri}">
     <description>Import NUOPC protos</description>
   </setupTask>
   <stream name="master"
