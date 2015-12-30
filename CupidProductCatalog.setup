@@ -86,7 +86,7 @@
         <requirement
             name="org.earthsystemmodeling.oomph.createsyncproject.feature.group"/>
         <repository
-            url="cupidFAIL"/>
+            url="cupid:/"/>
         <repository
             url="file:/home/rocky/eclipse/cupiddev-v0-2/git/oomph/releng/org.earthsystemmodeling.oomph.releng.p2/target/repository"/>
         <description></description>
