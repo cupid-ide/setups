@@ -10,14 +10,14 @@
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Doomph.redirection.cupid_products"
-      value="=index:/redirectable.products.setup->file:/home/rocky/eclipse/cupiddev-v0-2/git/cupid/org.earthsystemmodeling.cupid/oopmh/CupidProductCatalog.setup"
+      value="=index:/redirectable.products.setup->https://raw.githubusercontent.com/cupid-ide/setups/master/CupidProductCatalog.setup"
       vm="true">
     <description>Add redirect</description>
   </setupTask>
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Doomph.redirection.cupid_projects"
-      value="=index:/redirectable.projects.setup->file:/home/rocky/eclipse/cupiddev-v0-2/git/cupid/org.earthsystemmodeling.cupid/oopmh/CupidProjectCatalog.setup"
+      value="=index:/redirectable.projects.setup->https://raw.githubusercontent.com/cupid-ide/setups/master/CupidProjectCatalog.setup"
       vm="true">
     <description>Add redirect</description>
   </setupTask>
