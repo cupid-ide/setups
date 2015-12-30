@@ -86,9 +86,9 @@
         <requirement
             name="org.earthsystemmodeling.oomph.createsyncproject.feature.group"/>
         <repository
-            url="cupid:/"/>
+            url="http://www.earthsystemmodeling.org/cupid/mars"/>
         <repository
-            url="file:/home/rocky/eclipse/cupiddev-v0-2/git/oomph/releng/org.earthsystemmodeling.oomph.releng.p2/target/repository"/>
+            url="http://www.earthsystemmodeling.org/cupid/oomph/mars"/>
         <description></description>
       </setupTask>
       <setupTask
