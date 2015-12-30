@@ -10,18 +10,6 @@
     label="UGCS Regional">
   <setupTask
       xsi:type="setup:VariableTask"
-      name="noaa.username"
-      label="NOAA Username (without @noaa.gov)">
-    <description>NOAA Username (without @noaa.gov)</description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:VariableTask"
-      name="noaa.port"
-      label="Local port used for port forwarding to Theia">
-    <description>Local port used for port forwarding to Theia</description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:VariableTask"
       name="nems.theia.userdir"
       label="Location of UGCS-Seasonal directory on Theia">
     <description>Absolute location of UGCS Regional app directory on Theia</description>
