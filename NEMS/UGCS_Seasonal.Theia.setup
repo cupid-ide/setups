@@ -24,7 +24,7 @@
       xsi:type="setup:VariableTask"
       name="nems.theia.userdir"
       label="Location of UGCS-Seasonal directory on Theia">
-    <description>Absolute location of UGCS-Seasonal directory on Theia</description>
+    <description>Absolute location of UGCS Seasonal app directory on Theia</description>
   </setupTask>
   <setupTask
       xsi:type="createsyncproject:CreateRemoteConnectionTask"
