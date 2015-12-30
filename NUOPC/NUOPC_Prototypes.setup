@@ -25,21 +25,26 @@
     <description>The NUOPC tag to check out</description>
   </setupTask>
   <setupTask
-      xsi:type="setup:ResourceCopyTask"
-      id="copy.psf"
-      sourceURL="https://raw.githubusercontent.com/cupid-ide/setups/master/NUOPC/NUOPCProtos.psf"
-      targetURL="${workspace.location/NUOPCProtos.psf}">
-    <description></description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:TextModifyTask"
-      url="${copy.psf.targetURL|uri}"
-      encoding="UTF-8">
-    <modification
-        pattern="(@NUOPC_TAG@)">
-      <substitution>${nuopc.protos.tag}</substitution>
-    </modification>
-    <description></description>
+      xsi:type="setup:CompoundTask"
+      name="NUOPC Protos Project Set">
+    <setupTask
+        xsi:type="setup:ResourceCopyTask"
+        id="copy.psf"
+        sourceURL="https://raw.githubusercontent.com/cupid-ide/setups/master/NUOPC/NUOPCProtos.psf"
+        targetURL="${workspace.location/NUOPCProtos.psf}">
+      <description></description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:TextModifyTask"
+        url="${copy.psf.targetURL|uri}"
+        encoding="UTF-8">
+      <modification
+          pattern="(@NUOPC_TAG@)">
+        <substitution>${nuopc.protos.tag}</substitution>
+      </modification>
+      <description></description>
+    </setupTask>
+    <description>Copy project set file for NUOPC protos</description>
   </setupTask>
   <setupTask
       xsi:type="projectset:ProjectSetImportTask"
