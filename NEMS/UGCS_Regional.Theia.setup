@@ -6,8 +6,8 @@
     xmlns:createsyncproject="http://www.eclipse.org/oomph/setup/createsyncproject/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/createsyncproject/1.0 https://raw.githubusercontent.com/cupid-ide/oomph/master/plugins/org.earthsystemmodeling.oomph.createsyncproject/model/CreateSyncProject.ecore"
-    name="nems.seasonal.app"
-    label="UGCS Seasonal">
+    name="nems.regional.app"
+    label="UGCS Regional">
   <setupTask
       xsi:type="setup:VariableTask"
       name="noaa.username"
@@ -37,17 +37,17 @@
   </setupTask>
   <setupTask
       xsi:type="createsyncproject:CreateSyncProjectTask"
-      id="syncproj.nems.seasonal"
-      projectName="UGCS_Seasonal"
+      id="syncproj.nems.regional"
+      projectName="UGCS_Regional"
       remoteConnectionName="${remoteconn.theia.connectionName}"
       remoteLocation="${nems.theia.userdir}">
     <filter
         pattern="*.o"/>
     <filter
         pattern="*.mod"/>
-    <description>Create UGCS Seasonal syncronized project</description>
+    <description>Create UGCS Regional syncronized project</description>
   </setupTask>
   <stream name="master"
       label="Master"/>
-  <description>Unified Global Coupled System - Seasonal NEMS application</description>
+  <description>Unified Global Coupled System - Regional NEMS application</description>
 </setup:Project>

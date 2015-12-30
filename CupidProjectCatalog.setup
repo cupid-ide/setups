@@ -25,6 +25,8 @@
       label="NEMS">
     <project
         href="https://raw.githubusercontent.com/cupid-ide/setups/master/NEMS/UGCS_Seasonal.Theia.setup#/"/>
+    <project
+        href="https://raw.githubusercontent.com/cupid-ide/setups/master/NEMS/UGCS_Regional.Theia.setup#/"/>
   </project>
   <description>Cupid projects</description>
 </setup:ProjectCatalog>
