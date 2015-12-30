@@ -25,30 +25,15 @@
     <description>The NUOPC tag to check out</description>
   </setupTask>
   <setupTask
-      xsi:type="setup:CompoundTask"
-      name="NUOPC Protos Project Set">
-    <setupTask
-        xsi:type="setup:ResourceCopyTask"
-        id="copy.psf"
-        sourceURL="https://raw.githubusercontent.com/cupid-ide/setups/master/NUOPC/NUOPCProtos.psf"
-        targetURL="${workspace.location/NUOPCProtos.psf}">
-      <description></description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:TextModifyTask"
-        url="${copy.psf.targetURL|uri}"
-        encoding="UTF-8">
-      <modification
-          pattern="(@NUOPC_TAG@)">
-        <substitution>${nuopc.protos.tag}</substitution>
-      </modification>
-      <description></description>
-    </setupTask>
-    <description>Copy project set file for NUOPC protos</description>
+      xsi:type="setup:ResourceCreationTask"
+      id="nuopc.protos.psf"
+      content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;psf version=&quot;2.0&quot;>&#xA;&lt;provider id=&quot;org.eclipse.team.svn.core.svnnature&quot;>&#xA;&lt;project reference=&quot;1.0.1,http://svn.code.sf.net/p/esmfcontrib/svn/NUOPC/${nuopc.protos.tag},NUOPC,609bc4ef1daf00151a15c4cdd983b78f;http://svn.code.sf.net/p/esmfcontrib/svn/;http://svn.code.sf.net/p/esmfcontrib/svn/;branches;tags;trunk;true;c3fc86fe-82d8-4841-a663-0ee342cebea3;http://svn.code.sf.net/p/esmfcontrib/svn;;false;;;0&quot;/>&#xA;&lt;/provider>&#xA;&lt;/psf>"
+      targetURL="${workspace.location/NUOPCProtos.psf|uri}">
+    <description></description>
   </setupTask>
   <setupTask
       xsi:type="projectset:ProjectSetImportTask"
-      uRL="${copy.psf.targetURL|uri}">
+      uRL="${nuopc.protos.psf.targetURL}">
     <description>Import NUOPC protos</description>
   </setupTask>
   <stream name="master"
