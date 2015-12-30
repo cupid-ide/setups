@@ -20,11 +20,11 @@
       url="${copy.psf.targetURL|uri}"
       encoding="UTF-8">
     <modification
-        pattern="$NUOPC_TAG$">
+        pattern="\$NUOPC_TAG\$">
       <substitution>tags/ESMF_7_0_0_beta_snapshot_62</substitution>
     </modification>
     <modification
-        pattern="$NUOPC_PROJNAME$">
+        pattern="\$NUOPC_PROJNAME\$">
       <substitution>ESMF_7_0_0_beta_snapshot_62</substitution>
     </modification>
     <description></description>
