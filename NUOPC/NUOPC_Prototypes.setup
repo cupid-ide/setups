@@ -9,6 +9,20 @@
     name="nuopc.prototypes.project"
     label="NUOPC Prototype Applications">
   <setupTask
+      xsi:type="setup:VariableTask"
+      name="nuopc.protos.tag"
+      defaultValue="trunk">
+    <choice
+        value="trunk"
+        label="trunk"/>
+    <choice
+        value="tags/ESMF_7_0_0_beta_snapshot_62"
+        label="tags/ESMF_7_0_0_beta_snapshot_62"/>
+    <choice
+        value="tags/ESMF_7_0_0_beta_snapshot_64"
+        label="tags/ESMF_7_0_0_beta_snapshot_64"/>
+  </setupTask>
+  <setupTask
       xsi:type="setup:ResourceCopyTask"
       id="copy.psf"
       sourceURL="https://raw.githubusercontent.com/cupid-ide/setups/master/NUOPC/NUOPCProtos.psf"
@@ -21,11 +35,7 @@
       encoding="UTF-8">
     <modification
         pattern="\$NUOPC_TAG\$">
-      <substitution>tags/ESMF_7_0_0_beta_snapshot_62</substitution>
-    </modification>
-    <modification
-        pattern="\$NUOPC_PROJNAME\$">
-      <substitution>ESMF_7_0_0_beta_snapshot_62</substitution>
+      <substitution>${nuopc.protos.tag}</substitution>
     </modification>
     <description></description>
   </setupTask>
