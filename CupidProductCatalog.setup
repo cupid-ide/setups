@@ -5,8 +5,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
-    name="CupidProductCatalog"
-    label="Cupid Product Catalog">
+    name="org.earthsystemmodeling.cupid.products"
+    label="Cupid Products">
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Doomph.redirection.cupid_products"
@@ -116,5 +116,5 @@
     </version>
     <description>Cupid tools for ESMF/NUOPC development </description>
   </product>
-  <description></description>
+  <description>Cupid is a set of plug-ins for use with the Earth System Modeling Framework (ESMF) and National Unified Operational Prediction Capability (NUOPC)</description>
 </setup:ProductCatalog>
