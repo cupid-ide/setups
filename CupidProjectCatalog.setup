@@ -40,5 +40,10 @@
     <project
         href="https://raw.githubusercontent.com/cupid-ide/setups/master/NEMS/UGCS_Regional.Theia.setup#/"/>
   </project>
+  <project name="nuopc.projects"
+      label="NUOPC">
+      <project
+        href="https://raw.githubusercontent.com/cupid-ide/setups/master/NUOPC/NUOPC_Prototypes.setup#/"/>
+   </project>
   <description>Cupid projects</description>
 </setup:ProjectCatalog>

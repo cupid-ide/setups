@@ -10,7 +10,9 @@
     label="NUOPC Prototype Applications">
   <setupTask
       xsi:type="projectset:ProjectSetImportTask"
-      uRL=""/>
+      uRL="https://raw.githubusercontent.com/cupid-ide/setups/master/NUOPC/NUOPCProtos.psf">
+    <description>Import NUOPC protos</description>
+  </setupTask>
   <stream name="master"
       label="Master"/>
   <description>NUOPC Prototypes Applications used for training and testing</description>
