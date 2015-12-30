@@ -36,7 +36,7 @@
       url="${copy.psf.targetURL|uri}"
       encoding="UTF-8">
     <modification
-        pattern="\$NUOPC_TAG\$">
+        pattern="(@NUOPC_TAG@)">
       <substitution>${nuopc.protos.tag}</substitution>
     </modification>
     <description></description>
