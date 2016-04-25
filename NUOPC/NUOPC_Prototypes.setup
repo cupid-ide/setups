@@ -11,14 +11,15 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="nuopc.protos.tag"
-      defaultValue="trunk"
+      value=""
+      defaultValue="tags/ESMF_7_0_0"
       label="NUOPC Prototypes Tag">
-    <choice
-        value="trunk"
-        label="trunk"/>
     <choice
         value="tags/ESMF_7_0_0"
         label="tags/ESMF_7_0_0"/>
+    <choice
+        value="trunk"
+        label="trunk"/>
     <description>The NUOPC tag to check out</description>
   </setupTask>
   <setupTask
