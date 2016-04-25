@@ -17,11 +17,8 @@
         value="trunk"
         label="trunk"/>
     <choice
-        value="tags/ESMF_7_0_0_beta_snapshot_62"
-        label="tags/ESMF_7_0_0_beta_snapshot_62"/>
-    <choice
-        value="tags/ESMF_7_0_0_beta_snapshot_64"
-        label="tags/ESMF_7_0_0_beta_snapshot_64"/>
+        value="tags/ESMF_7_0_0"
+        label="tags/ESMF_7_0_0"/>
     <description>The NUOPC tag to check out</description>
   </setupTask>
   <setupTask
