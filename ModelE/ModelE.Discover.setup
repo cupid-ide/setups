@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:createsyncproject="http://www.eclipse.org/oomph/setup/createsyncproject/1.0"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/createsyncproject/1.0 https://raw.githubusercontent.com/cupid-ide/oomph/master/plugins/org.earthsystemmodeling.oomph.createsyncproject/model/CreateSyncProject.ecore"
+    name="modele.app"
+    label="Model E">
+  <setupTask
+      xsi:type="setup:VariableTask"
+      name="modele.srcdir"
+      label="Location of ModelE source directory">
+    <description>Absolute location of ModelE source directory</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      name="nasa.username"
+      label="NASA Username"/>
+  <setupTask
+      xsi:type="createsyncproject:CreateRemoteConnectionTask"
+      id="remoteconn.login"
+      connectionName="login.nccs.nasa.gov"
+      host="login.nccs.nasa.gov"
+      username="${nasa.username}"
+      proxyCommand="">
+    <description></description>
+  </setupTask>
+  <setupTask
+      xsi:type="createsyncproject:CreateRemoteConnectionTask"
+      id="remoteconn.discover"
+      connectionName="discover"
+      host="discover"
+      username="${nasa.username}"
+      proxyConnection="remoteconn.login"
+      proxyCommand="direct discover">
+    <description></description>
+  </setupTask>
+  <setupTask
+      xsi:type="createsyncproject:CreateSyncProjectTask"
+      id="syncproj.modele"
+      filter=""
+      projectName="ModelE"
+      remoteConnectionName="${remoteconn.discover.connectionName}"
+      remoteLocation="${modele.srcdir}">
+    <description>Create Model E synchronized project</description>
+  </setupTask>
+  <stream name="master"
+      label="Master"/>
+  <description>Model E</description>
+</setup:Project>
