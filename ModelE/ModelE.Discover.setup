@@ -5,6 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:createsyncproject="http://www.eclipse.org/oomph/setup/createsyncproject/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/createsyncproject/1.0 https://raw.githubusercontent.com/cupid-ide/oomph/master/plugins/org.earthsystemmodeling.oomph.createsyncproject/model/CreateSyncProject.ecore"
     name="modele.app"
     label="Model E">
@@ -45,6 +46,13 @@
       remoteConnectionName="${remoteconn.discover.connectionName}"
       remoteLocation="${modele.srcdir}">
     <description>Create Model E synchronized project</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup.p2:P2Task">
+    <requirement
+        name="org.earthsystemmodeling.oomph.createsyncproject.feature.group"/>
+    <repository
+        url="http://www.earthsystemmodeling.org/cupid/oomph/mars"/>
   </setupTask>
   <stream name="master"
       label="Master"/>
