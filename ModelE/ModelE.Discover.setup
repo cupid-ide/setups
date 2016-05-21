@@ -44,7 +44,8 @@
       filter=""
       projectName="ModelE"
       remoteConnectionName="${remoteconn.discover.connectionName}"
-      remoteLocation="${modele.srcdir}">
+      remoteLocation="${modele.srcdir}"
+      enableFortranAnalysis="true">
     <description>Create Model E synchronized project</description>
   </setupTask>
   <setupTask
