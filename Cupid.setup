@@ -117,6 +117,8 @@
           name="org.eclipse.team.svn.feature.group"/>
       <requirement
           name="org.eclipse.oomph.setup.feature.group"/>
+      <requirement
+          name="org.eclipse.egit.feature.group"/>
       <repository
           url="http://download.eclipse.org/technology/epp/packages/neon"/>
       <repository
